@@ -1,0 +1,355 @@
+/* ASIDE BAR CSS */
+.videoasideclose{
+    display: none;
+    width: 15vw;
+    position: fixed;
+    z-index: 1000;
+    padding: 20px;
+    height: 100vh;
+    background-color: #0F0F0F;
+    color: white;
+    overflow-y: scroll;
+    font-size: 14px;
+    font-weight: 400;
+}
+.videoasideopen{
+    display: block;
+    width: 5vw;
+    height: 100vh;
+    margin-right: 10px;
+    width: 90px;
+    height: 100vh;
+    background-color: #0F0F0F; 
+    color: white;
+    padding-top: 10px;
+}
+.videoasideopen>div>img{
+    margin-left: 25px;
+}
+.videoasideopen>div>p{
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 19px;
+}
+.videoasideopen>div:nth-child(3)>p{
+    margin-left: 8px;
+}
+.videoasideopen>div:nth-child(4)>p{
+    margin-left: 24px;
+}
+.videoasideopen>div:first-child{
+    margin-top: 20px;
+}
+.videoasideopen>div{
+    margin-top: 40px;
+}
+
+/* CLASS USED TO TOGGLE ASIDE BAR */
+.videoasidec{
+    display: none;
+}
+.videoasideo{
+    display: block;
+}
+.videopageopen{
+    margin-left: 12.5vw;
+}
+
+/* VIDEOLOADER CSS LOADING*/
+.videopage{
+    display: flex;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: #0F0F0F;
+}
+
+.videoPlayer{
+    width: 84%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* margin-right: 80px; */
+}
+/* .relatedvideo{
+    background-color: greenyellow;
+} */
+
+.selectedVideo{
+    width: 59%;
+}
+#playerdiv{
+    border-radius: 10px;
+}
+.feedVideoData>p{
+     font-size: 20px;
+     font-weight: 700;
+     margin: 10px 0px;
+}
+.playback-body{
+    width: 740px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.playbackB1{
+    display: flex;
+    align-items: center;
+    width: 430px;
+}
+.playbackB1>img{
+    width: 45px;
+    border-radius: 50%;
+}
+.channelname{
+    margin: 0px 10px;
+}
+.channelname>h4{
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.channelname>p{
+    color: rgb(182, 175, 175);
+    font-size: 13px;
+}
+
+.playbackB1>button{
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.subscribe{
+    background-color: white;
+    color: black;
+    padding: 10px 12px;
+    border-radius: 19px;
+}
+.unsubscribe{
+    display: none;
+}
+.unsubscribe>button{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: rgb(40,39,39);
+    padding: 7px 9px;
+    border-radius: 19px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.playbackB2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.like-dislike{
+    display: flex;
+    align-items: center;
+    background-color: rgb(40,39,39);
+    padding: 9px 16px;
+    border-radius: 22px;
+    margin-right: 10px;
+}
+.like-dislike>img{
+    cursor: pointer;
+}
+
+.like-dislike>p{
+    font-size: 14px;
+    margin-inline: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgb(112, 108, 108);
+}
+.likefilled{
+    display: none;
+}
+.dislikefilled{
+    display: none;
+}
+.playbackB2>button{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: rgb(40,39,39);
+    padding: 9px 14px;
+    border-radius: 22px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.playbackB2>button>img{
+    margin-right: 5px
+}
+.dislikefilled{
+    transform: rotate(180deg);
+}
+.options{
+    display: flex;
+    align-items: center;
+    padding: 9px 9px;
+    border-radius: 50%;
+    background-color: rgb(40,39,39);
+}
+.options>img{
+    color: white;
+}
+.video-description{
+    width: 700px;
+    margin-top: 20px;
+    background-color: rgb(40,39,39);
+    padding: 20px;
+    border-radius: 9px;
+    margin-bottom: 20px
+}
+.video-description>p:first-child{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.video-description>p:last-child{
+    font-size: 14px;
+}
+
+.displayblock{
+    display: block;
+}
+.displaynone{
+    display: none;
+}
+.displayln{
+ display: none;
+}
+.displaylb{
+    display: block;
+   padding: 0px 3px;
+}
+
+.relatedvideo{
+    width: 27vw;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.rvideo{
+    display: flex;
+    align-items: center;
+}
+.rvideo-1>img{
+    width: 160px;
+    height: 110px;
+    border-radius: 7px;
+}
+.rvideo-2{
+    margin-left: 10px;
+}
+.rvideo-2>h4{
+    height: 43px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+.rvideo-2>p{
+    font-size: 13px;
+    color: rgb(182, 175, 175);
+}
+.rvideo-2>p:last-child{
+    margin-bottom: 20px;
+}
+
+/* COMMENT SECTIONS */
+
+.commentnos{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+.commentsection{
+    display: flex;
+    flex-direction: column;
+    width: 740px;
+}
+.usercomment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.usercomment>img{
+    width: 40px;
+    border-radius: 50%;
+}
+.usercomment>input{
+   width: 670px;
+   border: none;
+   border-bottom: 2px solid rgb(40,39,39);
+   color: white;
+   padding: 7px;
+   background-color: transparent;
+}
+.usercomment>input::placeholder{
+    color: rgb(182, 175, 175);
+    font-size: 14px;
+}
+.usercomment>input:focus{
+    outline: none;
+    border-bottom: 1px solid white;
+}
+.commentclick>img{
+    cursor: pointer;
+}
+
+.ytcomment{
+    display: flex;
+    align-items: top;
+    margin: 20px 0px;
+}
+.ytcommentpic>img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+.ytcommentbody>p:first-child{
+   font-size: 13px;
+   font-weight: 600;
+   margin-bottom: 7px;
+}
+.ytcommentbody>p:first-child>span{
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 300;
+    color: rgb(182, 175, 175);
+}
+.actualcomment{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.commentclick{
+    display: flex;
+    align-items: center;
+}
+.commentclick>p{
+    font-size: 13px;
+    margin-inline: 10px;
+    color: rgb(182, 175, 175);
+}
+.commentclick>button{
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: transparent;
+    margin-left: 30px;
+}
+
+.likecfilled{
+    display: none;
+}
+.dislikecfilled{
+    display: none;
+}

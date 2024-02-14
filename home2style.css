@@ -1,0 +1,84 @@
+/* BUTTON BAR CSS */
+.buttonbar{
+    font-family: 'Inter', sans-serif;
+    /* background-color: #212121; */
+    background-color: #0F0F0F;
+    margin: 20px 0px 20px 20px;
+    width: 82vw;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.buttonbar>button{
+    border: none; 
+    padding: 7px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 9px;
+    color: white;
+    background-color: rgb(59,59,59);
+    margin-right: 12px;
+    cursor: pointer;
+}
+.buttonbar>button:last-child{
+   margin-right: 65px;
+}
+.button-div{
+  position: relative;
+}
+.buttonbar>.activebutton{
+  background-color: white;
+  color: black;
+}
+.button-div>p:first-child{
+  /* display: none; */
+}
+
+.leftarrow{
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  font-size: 18px;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0px 10px;
+  background: linear-gradient(to right,#0F0F0F 50%, transparent) ; 
+  display: none;
+}
+.rightarrow{
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  font-size: 18px;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0px 18px 0px 5px;
+  justify-content: right;
+  background: linear-gradient(to left,#0F0F0F 50%, transparent) ;
+  display: none;
+}
+.leftarrow>img,.rightarrow>img{
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+}
+.rightarrow>img{
+  margin-left: 5px;
+}
+.leftarrow>img:hover,.rightarrow>img:hover{
+  align-items: center;
+  background-color:  rgb(59,59,59);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+.activearrow{
+  display: block;
+}
