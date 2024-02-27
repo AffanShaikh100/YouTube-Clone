@@ -118,20 +118,22 @@ function playRelatedVideo(vid){
     selectedVideo=vid;
     videoIdStore=vid.id.videoId;
 
+
     if (typeof YT === "undefined" || typeof YT.Player !== "function") {
         console.error("YouTube API is not yet loaded.");
        } 
        else {
         // If the API is already loaded, call the function directly
     
-        new YT.Player("playerdiv",{
-            height: "390",
-            width: "740",
-            videoId:videoIdStore,
-            events:{
-                "onReady": onPlayerReady,
-            }
-         })
+        // new YT.Player("playerdiv",{
+        //     height: "390",
+        //     width: "740",
+        //     videoId:videoIdStore,
+        //     events:{
+        //         "onReady": onPlayerReady,
+        //     }
+        //  })
+        playerInstance.loadVideoById(videoIdStore);
            
         }
         fetchstoreVid();

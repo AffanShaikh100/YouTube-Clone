@@ -4,6 +4,8 @@ let selectedVideo;
 let videoIdStore;
 let commentObj;
 
+let playerInstance;
+
 let keywords = "songs music news trailer technology gadget science movies";
 let vos = 30;
 let relatedobj=[];
@@ -112,7 +114,7 @@ function storeddata(){
         else {
          // If the API is already loaded, call the function directly
      
-         new YT.Player("playerdiv",{
+         playerInstance = new YT.Player("playerdiv",{
              height: "390",
              width: "740",
              videoId:videoIdStore,
@@ -136,7 +138,8 @@ function onPlayerReady(event) {
 function fetchstoreVid(){
 
     let targetele = document.getElementsByClassName("feedVideoData")[0];
-
+    targetele.innerHTML="";
+    
     let countViews;
     if(selectedVideo.videoDetails===undefined){
         let randomNumber = Math.floor(Math.random() * (30000000 - 2000000) + 2000000);

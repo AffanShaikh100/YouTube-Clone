@@ -80,6 +80,7 @@
 }
 #playerdiv{
     border-radius: 10px;
+    cursor: pointer;
 }
 .feedVideoData>p{
      font-size: 20px;
@@ -239,6 +240,7 @@
 .rvideo{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .rvideo-1>img{
     width: 160px;
