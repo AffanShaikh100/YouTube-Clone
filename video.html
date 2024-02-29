@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
     <!-- LINKING OF CSS FILE -->
-    <link rel="stylesheet" href="./homestyle.css">
-    <link rel="stylesheet" href="./home2style.css">
-    <link rel="stylesheet" href="./homevideos.css">
-    <link rel="stylesheet" href="./videostyle.css">
+    <link rel="stylesheet" href="./CSS/Home_CSS/homestyle.css" />
+    <link rel="stylesheet" href="./CSS/Home_CSS/home2style.css" />
+    <link rel="stylesheet" href="./CSS/Home_CSS/homevideos.css" />
+    <link rel="stylesheet" href="./CSS/VideoPlayer_CSS/videostyle.css" />
+    <link rel="stylesheet" href="./CSS/Web_Responsive/webrespPlayer.css" />
     <!-- FONT FAMILY INTER  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,151 +17,192 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+    <!-- LINKING YOUTUBE I-FRAME SCRIPT FILE -->
     <script src="https://www.youtube.com/iframe_api?origin=https://127.0.0.1:5500"></script>
-
   </head>
+
   <body onload="storeddata()">
-      <!-- HEADER PART STARTS HERE -->
-      <header>
-        <div class="header">
-          <!-- nav-left section -->
-          <div class="navleft">
-            <img onclick="videoAsidetoggle()" src="./Home page/Aside bar icon.svg" alt="Loading" />
-            <img  onclick="clickLogo()" src="./Home page/Youtube logo.svg" alt="Logo loading">
-            <span>IN</span>
-          </div>
-          <!-- nav-mid section -->
-          <div class="navmid">
-             <div>
-               <input id="videoplayerhome" type="text" placeholder="  Search">
-               <img onclick="videohtmlSearch()" src="./Home page/Search nav icon.svg" alt="loading">
-             </div>
-             <img src="./Home page/Audio icon.svg" alt="loading">
-          </div>
-          <!-- nav-right section -->
-          <div class="navright">
-            <img src="./Home page/User-r-1.svg" alt="loading">
-            <img src="./Home page/User-r-2.svg" alt="loading">
-            <img src="./Home page/User-r-3.svg" alt="loading">
-            <img src="./Home page/User-r-4.png" alt="loading">
-          </div>
+    <!-- HEADER PART STARTS HERE -->
+    <header>
+      <div class="header">
+        <!-- nav-left section -->
+        <div class="navleft">
+          <img
+            onclick="videoAsidetoggle()"
+            src="./Home page/Aside bar icon.svg"
+            alt="Loading"
+          />
+          <img
+            onclick="clickLogo()"
+            src="./Home page/Youtube logo.svg"
+            alt="Logo loading"
+          />
+          <span>IN</span>
         </div>
-      </header>
-  
-     <main>
-         <div class="videopage">
-             
-            <div>
-                <aside>
-    
-                   <div id="videoasideclose" class="videoasideclose">
-                       <div class="aside1">
-                          <p><img src="./Home page/Aside-Home.svg">Home</p>
-                          <p><img class="shortsimage" src="./Home page/youtube-shorts-logo-15251 (3).svg">Shorts</p>
-                          <p><img src="./Home page/Aside-subscription.svg">Subscriptions</p>
-                       </div>
-                      
-                       <div class="aside2">
-                         <p>You &nbsp;></p>
-                         <p><img src="./Home page/Aside2-1.png">Your Channel</p>
-                         <p><img src="./Home page/Aside2-2.svg">Library</p>
-                         <p><img src="./Home page/Aside2-3.svg">History</p>
-                         <p><img src="./Home page/Aside2-4.svg">Your Videos</p>
-                         <p><img src="./Home page/Aside2-5.svg">Watch Later</p>
-                         <div id="aside2-popup" onclick="aside2slider()">
-                           <p id="test"><img src="./Home page/Aside2-showmore.svg">Show more</p>
-                         </div>
-                         
-                           <div class="aside2-popup">
-                            <p><img src="./Home page/Aside2-6.svg">Liked Videos</p>
-                            <p><img src="./Home page/Aside2-savedply.png">Saved Playlist</p>
-                            <p><img src="./Home page/Aside2-savedply.png">Saved Playlist 2</p>
-                           </div>
-                       </div>
-                      
-                       <div class="aside3">
-                           <p>SUBSCRIPTIONS</p>
-                           <p><img src="./Home page/subscription1-aside.png">Marques Brownlee</p>
-                           <p><img src="./Home page/subscription2-aside.png">Venom's Tech</p>
-                           <p><img src="./Home page/subscription3-aside.png">Gyan Therapy</p>
-                           <p><img src="./Home page/subscription4-aside.png">MotorInc</p>
-                           <p><img src="./Home page/subscription5-aside.png">Motor Octane</p>
-                           <p><img src="./Home page/subscription6-aside.png">Kawasaki Motors</p>
-                           <div id="aside3clickdiv" onclick="aside3slider()">
-                            <p><img src="./Home page/Aside2-showmore.svg">Show more</p>
-                          </div>
-      
-                          <div class="aside3-popup">
-                            <p><img src="./Home page/subscription7-aside.png">Netflix India</p>
-                            <p><img src="./Home page/subscription8-aside.png">Mercedez Benz</p>
-                            <p><img src="./Home page/subscription9-aside.png">Tata Motors Car</p>
-                          </div>
-                       </div>
-      
-                       <div class="aside4">
-                           <p>MORE FROM YOUTUBE</p>
-                           <p><img src="./Home page/premium-fill.svg">Youtube Premium</p>
-                           <p><img src="./Home page/gaming-fill.svg">Gaming</p>
-                           <p><img src="./Home page/live-fill.svg">Live</p>
-                           <p><img src="./Home page/sports-fill.svg">Sports</p>
-                       </div>
-      
-                       <div class="aside5">
-                         <p><img src="./Home page/settings.svg">Settings</p>
-                         <p><img src="./Home page/report.svg">Report history</p>
-                         <p><img src="./Home page/help.svg">Help</p>
-                         <p><img src="./Home page/feedback.svg">Send feedback</p>
-                       </div>
-      
-                       <div class="aside6">
-                           <p>About Press Copyright</p>
-                           <p>Contact us  Creators</p>
-                           <p>Advertise Developers</p>
-                           <p>Terms Privacy Policy & Safety</p>
-                           <p>How Youtue works</p>
-                           <p>Test new features</p>
-                           <p>© 2024 Google LLC</p>
-                       </div>
-                   </div>
-                   
-                   <div class="videoasideopen" id="videoasideopen">
-                       
-                   </div>
-                </aside>
-            </div>
 
-            <div class="videoPlayer" >
+        <!-- nav-mid section -->
+        <div class="navmid">
+          <div>
+            <input id="videoplayerhome" type="text" placeholder="  Search" />
+            <img
+              onclick="videohtmlSearch()"
+              src="./Home page/Search nav icon.svg"
+              alt="loading"
+            />
+          </div>
+          <img src="./Home page/Audio icon.svg" alt="loading" />
+        </div>
 
-                 <div class="selectedVideo">
+        <!-- nav-right section -->
+        <div class="navright">
+          <img src="./Home page/User-r-1.svg" alt="loading" />
+          <img src="./Home page/User-r-2.svg" alt="loading" />
+          <img src="./Home page/User-r-3.svg" alt="loading" />
+          <img src="./Home page/User-r-4.png" alt="loading" />
+        </div>
+      </div>
+    </header>
 
-                     <div id="playerdiv"></div>
+    <main>
+      <div class="videopage">
+        <div>
+          <aside>
+            <div id="videoasideclose" class="videoasideclose">
+              <div class="aside1">
+                <p><img src="./Home page/Aside-Home.svg" />Home</p>
+                <p>
+                  <img
+                    class="shortsimage"
+                    src="./Home page/youtube-shorts-logo-15251 (3).svg"
+                  />Shorts
+                </p>
+                <p>
+                  <img src="./Home page/Aside-subscription.svg" />Subscriptions
+                </p>
+              </div>
 
-                        <div class="feedVideoData"> 
- 
-                        </div>
-                   
-                   <div class="commentsection">
-
-                   </div>
-
+              <div class="aside2">
+                <p>You &nbsp;></p>
+                <p><img src="./Home page/Aside2-1.png" />Your Channel</p>
+                <p><img src="./Home page/Aside2-2.svg" />Library</p>
+                <p><img src="./Home page/Aside2-3.svg" />History</p>
+                <p><img src="./Home page/Aside2-4.svg" />Your Videos</p>
+                <p><img src="./Home page/Aside2-5.svg" />Watch Later</p>
+                <div id="aside2-popup" onclick="aside2slider()">
+                  <p id="test">
+                    <img src="./Home page/Aside2-showmore.svg" />Show more
+                  </p>
                 </div>
 
-                <div class="relatedvideo">
+                <div class="aside2-popup">
+                  <p><img src="./Home page/Aside2-6.svg" />Liked Videos</p>
+                  <p>
+                    <img src="./Home page/Aside2-savedply.png" />Saved Playlist
+                  </p>
+                  <p>
+                    <img src="./Home page/Aside2-savedply.png" />Saved Playlist
+                    2
+                  </p>
+                </div>
+              </div>
 
+              <div class="aside3">
+                <p>SUBSCRIPTIONS</p>
+                <p>
+                  <img src="./Home page/subscription1-aside.png" />Marques
+                  Brownlee
+                </p>
+                <p>
+                  <img src="./Home page/subscription2-aside.png" />Venom's Tech
+                </p>
+                <p>
+                  <img src="./Home page/subscription3-aside.png" />Gyan Therapy
+                </p>
+                <p><img src="./Home page/subscription4-aside.png" />MotorInc</p>
+                <p>
+                  <img src="./Home page/subscription5-aside.png" />Motor Octane
+                </p>
+                <p>
+                  <img src="./Home page/subscription6-aside.png" />Kawasaki
+                  Motors
+                </p>
+                <div id="aside3clickdiv" onclick="aside3slider()">
+                  <p><img src="./Home page/Aside2-showmore.svg" />Show more</p>
                 </div>
 
+                <div class="aside3-popup">
+                  <p>
+                    <img src="./Home page/subscription7-aside.png" />Netflix
+                    India
+                  </p>
+                  <p>
+                    <img src="./Home page/subscription8-aside.png" />Mercedez
+                    Benz
+                  </p>
+                  <p>
+                    <img src="./Home page/subscription9-aside.png" />Tata Motors
+                    Car
+                  </p>
+                </div>
+              </div>
+
+              <div class="aside4">
+                <p>MORE FROM YOUTUBE</p>
+                <p><img src="./Home page/premium-fill.svg" />Youtube Premium</p>
+                <p><img src="./Home page/gaming-fill.svg" />Gaming</p>
+                <p><img src="./Home page/live-fill.svg" />Live</p>
+                <p><img src="./Home page/sports-fill.svg" />Sports</p>
+              </div>
+
+              <div class="aside5">
+                <p><img src="./Home page/settings.svg" />Settings</p>
+                <p><img src="./Home page/report.svg" />Report history</p>
+                <p><img src="./Home page/help.svg" />Help</p>
+                <p><img src="./Home page/feedback.svg" />Send feedback</p>
+              </div>
+
+              <div class="aside6">
+                <p>About Press Copyright</p>
+                <p>Contact us Creators</p>
+                <p>Advertise Developers</p>
+                <p>Terms Privacy Policy & Safety</p>
+                <p>How Youtue works</p>
+                <p>Test new features</p>
+                <p>© 2024 Google LLC</p>
+              </div>
             </div>
 
-         </div>
-     </main>
+            <div class="videoasideopen" id="videoasideopen">
 
-     <!-- JAVA SCRIPT FILE -->
-    
-     <!-- this is cdn for player which we will use to acess YT Class -->
+            </div>
+          </aside>
+        </div>
 
-     <script src="./homescript.js"></script>
-     <script src="./videoscript.js"></script>
-     <script src="./videoscript2.js"></script>
+        <div class="videoPlayer">
+
+          <div class="selectedVideo">
+
+            <div id="playerdiv"></div>
+
+            <div class="feedVideoData"></div>
+
+            <div class="commentsection"></div>
+
+          </div>
+
+          <div class="relatedvideo"></div>
+          
+        </div>
+      </div>
+    </main>
+
+    <!-- JAVA SCRIPT FILE -->
+
+    <!-- this is cdn for player which we will use to acess YT Class -->
+
+    <script src="./Script_Files/Home_Script/homescript.js"></script>
+    <script src="./Script_Files/VideoPlayer_Script/videoscript.js"></script>
+    <script src="./Script_Files/VideoPlayer_Script/videoscript2.js"></script>
+
   </body>
-  
+</html>

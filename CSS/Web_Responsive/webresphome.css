@@ -1,0 +1,130 @@
+/* WEB RESPONSIVE OF HOMEPAGE */
+
+/* Mobile View (max-width:480px)*/
+@media screen and (max-width: 480px) {
+  /* hiding unnecessary things to match with actual youtube app */
+
+  /* Handling header bar */
+  header {
+    display: flex;
+    align-items: center;
+  }
+  .asideopen {
+    display: none;
+  }
+  .asideclose {
+    display: none;
+  }
+  .navleft > img:first-child {
+    display: none;
+  }
+  .navmid > div {
+    margin-inline: 10px;
+  }
+  .navmid > img {
+    display: none;
+  }
+  .navright {
+    margin-right: 20px;
+  }
+  .navright > img:first-child,
+  .navright > img:nth-child(2),
+  .navright > img:nth-child(3) {
+    display: none;
+  }
+  .navright > img:last-child {
+    width: 30px;
+    margin-top: 5px;
+  }
+  .buttonbar {
+    width: 98vw;
+  }
+  .leftarrow,
+  .rightarrow {
+    display: none;
+  }
+
+  .videosection {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  .videoCard {
+    max-width: 94vw;
+    margin: 20px 0px;
+  }
+}
+
+
+/* Small Tablets size (767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* hiding unnecessary things to match with actual youtube app */
+  .navmid > img {
+    display: none;
+  }
+  .navmid > div {
+    width: 300px;
+  }
+  .navright > img:nth-child(2) {
+    display: none;
+  }
+  .navright {
+    margin-top: 5px;
+  }
+  .mainpage {
+    position: relative;
+  }
+  .asideclose {
+    display: none;
+  }
+  .asideopen {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    width: 30vw;
+    margin: 0px;
+    padding-left: 20px;
+  }
+  .mainpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .homepart2 {
+    width: 100vw;
+  }
+  .buttonbar {
+    width: 90vw;
+  }
+  .videosection {
+    max-width: 100%;
+  }
+  .videoCard {
+    max-width: 41vw;
+    margin: 20px 0px;
+    margin-right: 13px;
+  }
+}
+
+
+/* Tablets and Small Laptop Size */
+
+@media screen and (min-width: 768px) and (max-width: 1044px) {
+  .asideopen {
+    width: 21vw;
+  }
+  .videosection {
+    max-width: 92%;
+    padding-left: 20px;
+  }
+  .videoCard {
+    max-width: 35vw;
+  }
+  .navright {
+    margin-top: 5px;
+  }
+}
