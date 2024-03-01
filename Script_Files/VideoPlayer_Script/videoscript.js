@@ -1,18 +1,36 @@
-
 // GLOBAL VARIABLE
-const API_KEY1 = "AIzaSyCVtSGF9F3X0l1EAKWMgCRLPMmbP2WPEr4";
+const API_KEY1 = "AIzaSyCTBT8Lv-Z2FDQ-cZWisuQ1GJI1v3EmKMo";
 let selectedVideo;
 let videoIdStore;
 let commentObj;
 let playerInstance;
-let keywords = "songs music news trailer technology gadget science movies";
-let vos = 30;
 let relatedobj = [];
 
 let clickobj = {
     likeState: false,
     dislikeState: false,
   };
+const youtubeRelatedTopics = [
+  "Laptop Review",
+  "random",
+  "Codin",
+  "Java Script",
+  "Front end Developer",
+  "Car Review",
+  "SmartPhone Review",
+  "India",
+  "Trailers",
+  "News",
+  "Flagship killer Smartphone",
+  "Mercedez",
+  "Thriller Movie",
+  "History",
+  "Standup Comedy",
+  "Travel",
+  "Science",
+  "Technology",
+  ];
+  
 
 // Cheack API Fetch Data
 const mainData1 = {
@@ -99,6 +117,8 @@ const mainData1 = {
   },
 };
 console.log(mainData1);
+
+
 
 
 // ONLOAD FUNCTION ,FETCHING DATA FROM LOCAL STORAGE AND RENDERING IT
@@ -201,8 +221,9 @@ function fetchstoreVid() {
 
   console.log("working");
   fetchComment();
-  fetchRelVideo(keywords, vos);
+  fetchRelVideo(randomRelTopics(),30);
 }
+
 // fetching nos of subscribers
 function getsubscriber(data) {
   const count = parseInt(data);
@@ -344,6 +365,26 @@ function toggledislike() {
   clickobj.dislikeState = !clickobj.dislikeState;
 }
 
+
+// FUNCTION TO LOAD RANDOM VIDEOS WHENEVER PAGE IS REFRESHED
+function randomRelTopics(){
+  const randomnos = 3;
+  let randomNames = [];
+  let duplicYTArray = youtubeRelatedTopics;
+  console.log(duplicYTArray);
+
+ // Randomly select three topics
+  for(let i=0; i<randomnos; i++){
+    const randomIndex = Math.floor(Math.random()*duplicYTArray.length);
+    randomNames.push(youtubeRelatedTopics[randomIndex]);
+    // Remove the selected topic to avoid duplicates
+    duplicYTArray.splice(randomIndex,1);
+  }
+
+  let stringTopics = randomNames.join(",");
+  console.log(stringTopics);
+  return stringTopics;
+}
 
 //FUNCTION TO SHOW RELATED VIDEOS ON RIGHT SIDE
 

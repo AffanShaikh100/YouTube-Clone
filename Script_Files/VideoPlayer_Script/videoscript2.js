@@ -1,13 +1,12 @@
-
 // GLOBAL VARIABLES
 let comments = [];
 let commentcount;
-const API_KEY2 = "AIzaSyCVtSGF9F3X0l1EAKWMgCRLPMmbP2WPEr4";
-
+const API_KEY2 = "AIzaSyCTBT8Lv-Z2FDQ-cZWisuQ1GJI1v3EmKMo";
 let clickCommentobj = {
   likeState: false,
   dislikeState: false,
 };
+
 
 // Cheack API Fetch Data
 let samplecomment = {
@@ -46,6 +45,8 @@ let samplecomment = {
   },
 };
 console.log(samplecomment);
+
+
 
 
 // GETTING COMMENT FROM API AND RENDER IT ON DOM
@@ -116,10 +117,13 @@ async function fetchComment() {
   });
 }
 
+// FUNCTION TO BE CALLED WHEN WE SEARCH ON VIDEO HTML PAGE
 function videohtmlSearch() {
   let videohome = document.getElementById("videoplayerhome").value;
   if (videohome !== "") {
-    // fetchVideo(inphome,27);
+  localStorage.clear();
+  let stringData = JSON.stringify(videohome);
+  localStorage.setItem("search", stringData);
     window.location.href = "./index.html";
   }
 }

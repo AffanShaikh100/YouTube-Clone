@@ -1,7 +1,3 @@
-const API_KEY = "AIzaSyCVtSGF9F3X0l1EAKWMgCRLPMmbP2WPEr4";
-
-const BASE_URL = "https://www.googleapis.com/youtube/v3";
-
 // Just use to cross check API Data
 const mainData = {
   kind: "youtube#searchResult",
@@ -89,6 +85,61 @@ console.log(mainData);
 
 // GLOBAL VARIABLE TO STORE DATA
 let realHomeData = [];
+const API_KEY = "AIzaSyCTBT8Lv-Z2FDQ-cZWisuQ1GJI1v3EmKMo";
+const BASE_URL = "https://www.googleapis.com/youtube/v3";
+const youtubeTopics = [
+  "Laptop Review",
+  "random",
+  "Codin",
+  "Java Script",
+  "Front end Developer",
+  "Car Review",
+  "SmartPhone Review",
+  "India",
+  "Trailers",
+  "News",
+  "Flagship killer Smartphone",
+  "Mercedez",
+  "Thriller Movie",
+  "History",
+  "Standup Comedy",
+  "Travel",
+  "Science",
+  "Technology",
+];
+
+
+
+// FUNCTION TO LOAD RANDOM VIDEOS WHENEVER PAGE IS REFRESHED
+function randomTopics(){
+  // checking to see if there is any data stored in local from video HTML page
+  if(localStorage.length>0){
+    let storedString = localStorage.getItem("search");
+    let valueString = JSON.parse(storedString);
+    localStorage.clear();
+    fetchVideo(valueString,27);
+    let inphome = document.getElementById("homeinp");
+    inphome.value=valueString;
+  }
+  else{
+    const randomnos = 7;
+    let randomNames = [];
+    let duplicYTArray = youtubeTopics;
+    console.log(duplicYTArray);
+  
+
+ // Randomly select three topics
+  for(let i=0; i<randomnos; i++){
+    const randomIndex = Math.floor(Math.random()*duplicYTArray.length);
+    randomNames.push(youtubeTopics[randomIndex]);
+    // Remove the selected topic to avoid duplicates
+    duplicYTArray.splice(randomIndex,1);
+  }
+
+  let stringTopics = randomNames.join("+")
+  fetchVideo(stringTopics,27);
+}
+}
 
 
 // FETCHING 25NOS OF VIDEO DATA FROM API
